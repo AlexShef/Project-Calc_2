@@ -18,25 +18,25 @@
         android:layout_margin="0dp"
         android:gravity="right"
         android:text="0"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:gravity="bottom" >
+        android:layout_below="@+id/tv_Result" >
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent" >
 
             <Button
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onNum7Click"
@@ -45,7 +45,7 @@
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onNum8Click"
@@ -54,7 +54,7 @@
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onNum9Click"
@@ -63,7 +63,7 @@
             <Button
                 android:id="@+id/bt_Sub"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onSubClick"
@@ -73,12 +73,12 @@
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent" >
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onNum4Click"
@@ -96,7 +96,7 @@
             <Button
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onNum5Click"
@@ -105,7 +105,7 @@
             <Button
                 android:id="@+id/bt_Div"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onDivClick"
@@ -115,12 +115,12 @@
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent" >
 
             <Button
                 android:id="@+id/bt_Num1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onNum1Click"
@@ -129,7 +129,7 @@
             <Button
                 android:id="@+id/button8"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onNum2Click"
@@ -138,7 +138,7 @@
             <Button
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onNum3Click"
@@ -147,7 +147,7 @@
             <Button
                 android:id="@+id/bt_Mul"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onMulClick"
@@ -157,12 +157,12 @@
         <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent" >
 
             <Button
                 android:id="@+id/button10"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onNum0Click"
@@ -171,7 +171,7 @@
             <Button
                 android:id="@+id/button7"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onPointClick"
@@ -180,7 +180,7 @@
             <Button
                 android:id="@+id/bt_Add"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onAddClick"
@@ -189,7 +189,7 @@
             <Button
                 android:id="@+id/bt_Result"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:minHeight="0dp"
                 android:onClick="onResultClick"
@@ -199,12 +199,12 @@
 
     <TextView
         android:id="@+id/tv_Result"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_Display"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="result"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
 
 </RelativeLayout>

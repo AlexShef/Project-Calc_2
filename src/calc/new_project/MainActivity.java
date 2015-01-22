@@ -6,7 +6,6 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +20,7 @@ public class MainActivity extends Activity {
 	
 	String s = new String();
 	
-	// Переменные
+	// variables
 	double a = 0;
 	double b = 0;
 	double result = 0;
@@ -37,13 +36,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        // Определяю обьекты по их id
+        // Define objects in their ed
              
         tv_Result = (TextView) findViewById(R.id.tv_Result);
         tv_Display = (TextView) findViewById(R.id.tv_Display);
-        
-        // Присваиваю обработчик кнопкам
-               
+                     
     }
       
     @Override
@@ -73,13 +70,6 @@ public class MainActivity extends Activity {
     
    ///////////////////////////////////////////////
     public void Output_Value(String s){
-    /*	if (TextUtils.isEmpty(et_Display.getText().toString())){
-    		et_Display.setText("0");
-    	} else 
-    	et_Display.setText(et_Display.getText().toString() + s);
-     				Point = true;
-    		value = Double.parseDouble(et_Display.getText().toString());*/
-    	
     	if ((s.equals(".")) && (Point == false)){
     			tv_Display.setText(tv_Display.getText().toString() + s);
  				Point = true;
@@ -143,111 +133,108 @@ public class MainActivity extends Activity {
       
     // Button Add click
     public void onAddClick(View v){
-     		// проверка на пустоту
-     		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
-   		      return;
-   		    }
-     		
-     		a = Double.parseDouble(tv_Display.getText().toString());
-     		
-     		tv_Display.setText("0");
-     		tv_Result.setText(a + "+");
-     		
-     		Oper = Operand.Add;
+ 		// проверка на пустоту
+ 		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
+	      return;
+	    }
+ 		
+ 		a = Double.parseDouble(tv_Display.getText().toString());
+ 		
+ 		tv_Display.setText("0");
+ 		tv_Result.setText(a + "+");
+ 		
+ 		Oper = Operand.Add;
      		
     }
     // Button Sub click
     public void onSubClick(View v){
      		
-     		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
-     		      return;
-     		}
-     		
-     		a = Double.parseDouble(tv_Display.getText().toString());
- 			
-     		tv_Display.setText("0");
- 			tv_Result.setText(a + "-");
- 			
- 			Oper = Operand.Sub;
+ 		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
+ 		      return;
+ 		}
+ 		
+ 		a = Double.parseDouble(tv_Display.getText().toString());
+		
+ 		tv_Display.setText("0");
+		tv_Result.setText(a + "-");
+		
+		Oper = Operand.Sub;
     		
     }
     // Button Sub click
     public void onMulClick(View v){
      		
-     		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
-     		      return;
-  		    }
-     		
-     		a = Double.parseDouble(tv_Display.getText().toString());
-     		
-     		tv_Display.setText("0");
-     		tv_Result.setText(a + "*");
-     		
-     		Oper = Operand.Mul;
+ 		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
+ 		      return;
+	    }
+ 		
+ 		a = Double.parseDouble(tv_Display.getText().toString());
+ 		
+ 		tv_Display.setText("0");
+ 		tv_Result.setText(a + "*");
+ 		
+ 		Oper = Operand.Mul;
      		
     }
     // Button Sub click
     public void onDivClick(View v){
      		
-     		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
-     		      return;
-     		}
-     		
-     		a = Double.parseDouble(tv_Display.getText().toString());
- 			
-     		tv_Display.setText("0");
- 			tv_Result.setText(a + "/");
- 			
- 			Oper = Operand.Div;
+ 		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
+ 		      return;
+ 		}
+ 		
+ 		a = Double.parseDouble(tv_Display.getText().toString());
+		
+ 		tv_Display.setText("0");
+		tv_Result.setText(a + "/");
+		
+		Oper = Operand.Div;
     		
     }		
     // Button Result click  		
  	public void	onResultClick(View v){
         		
-     		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
-     		      return;
-     		}
-     		
-     		b =  Double.parseDouble(tv_Display.getText().toString());
-     	
-     	    tv_Result.setText(a + "  " + b);
-     	    
-     	    Point = false;
-     	    
-     		switch (Oper){
-     		case Add:
-     			
-     			result = a + b;
-     			tv_Result.setText(a + "+" + b + "=" + result);
-     			
-     			break;
-     		case Sub:
-     			
-     			result = a - b;
-     			tv_Result.setText(a + "-" + b + "=" + result);
-     			
-     			break;
-     		case Mul:
-     			
-     			result = a * b;
-     			tv_Result.setText(a + "*" + b + "=" + result);
-     			
-     			break;
-     		case Div:
-     			
-     			if ((b != 0) && (b > 0)){
-     				result = a / b;
-         			tv_Result.setText(a + "/" + b + "=" + result);	
-     			}
-     			else{
-     				Toast.makeText(this, "На ноль делить нельзя",Toast.LENGTH_LONG).show();
-     			}
-     			break;
-     			
-     		}
-     		tv_Display.setText(""+result);
-     		
-     		
+ 		if (TextUtils.isEmpty(tv_Display.getText().toString())) {
+ 		      return;
+ 		}
+ 		
+ 		b =  Double.parseDouble(tv_Display.getText().toString());
+ 	
+ 	    tv_Result.setText(a + "  " + b);
+ 	    
+ 	    Point = false;
+ 	    
+ 		switch (Oper){
+ 		case Add:
+ 			
+ 			result = a + b;
+ 			tv_Result.setText(a + "+" + b + "=" + result);
+ 			
+ 			break;
+ 		case Sub:
+ 			
+ 			result = a - b;
+ 			tv_Result.setText(a + "-" + b + "=" + result);
+ 			
+ 			break;
+ 		case Mul:
+ 			
+ 			result = a * b;
+ 			tv_Result.setText(a + "*" + b + "=" + result);
+ 			
+ 			break;
+ 		case Div:
+ 			
+ 			if ((b != 0) && (b > 0)){
+ 				result = a / b;
+     			tv_Result.setText(a + "/" + b + "=" + result);	
+ 			}
+ 			else{
+ 				Toast.makeText(this, "На ноль делить нельзя",Toast.LENGTH_LONG).show();
+ 			}
+ 			break;
+ 		}
+ 		tv_Display.setText(""+result);
     }
 }
 
